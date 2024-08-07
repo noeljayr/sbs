@@ -1,6 +1,6 @@
 import Video from 'next-video';
 import advert from '@/videos/sbs.mp4';
-import thumbnail from "@/videos/adv-thumbnail.png"
+import thumbnail from "@/public/adv-thumbnail.png"
 function Ad() {
   return (
     <Video
