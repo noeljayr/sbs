@@ -1,0 +1,217 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(15px, 1.4vw, 1.2em);
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  overflow-x: hidden;
+  background-color: var(--white);
+}
+
+:root {
+  --black: #0c0506;
+  --white: #ffffff;
+  --off-white: #fef6f7;
+  --primary: #e75d6f;
+  --secondary: #f3aeb7;
+  --border: #fce8eb;
+  --gradinet: linear-gradient(180deg, #e75d6f 0%, #9368da 100%);
+  --font-l: 1.8rem;
+  --font-m: 1.05rem;
+  --font-s: 0.8rem;
+  --font-ss: 0.7rem;
+  --font-xs: 0.5rem;
+  --radius: 0.9rem;
+  --padding: 0.8rem;
+  --padding-2: calc(var(--padding) * 2);
+  --transition: all 0.5s cubic-bezier(0.57, 0.21, 0.69, 1.25);
+  --cta-2-hover: brightness(85%);
+  --cta-hover: brightness(85%);
+  --_accent-color: var(--primary);
+  --media-accent-color: var(--primary);
+}
+:host{
+  --_accent-color: var(--primary);
+  --_primary-color: var(--media-primary-color, #e75d6f);
+--_secondary-color: var(--media-secondary-color, var(--secondary));
+}
+/* :host{
+  --_primary-color: var(--media-primary-color, #e75d6f);
+--_secondary-color: var(--media-secondary-color, transparent);
+--_accent-color: var(--media-accent-color, #e75d6f);
+--_text-color: var(--media-text-color, #0c0506);
+--media-icon-color: var(--_primary-color);
+--media-control-background: var(--_secondary-color);
+--media-control-hover-background: var(--_accent-color);
+--media-time-buffered-color: rgba(255, 255, 255, 0.4);
+--media-preview-time-text-shadow: none;
+--media-control-height: 14px;
+--media-control-padding: 6px;
+color: var(--_primary-color);
+display: inline-block;
+width: 100%;
+height: 100%;
+} */
+
+* {
+  padding: 0;
+  margin: 0;
+  color: var(--black);
+  box-sizing: border-box;
+  font-size: var(--font-s);
+  scroll-behavior: smooth;
+  font-family: "Inter", sans-serif;
+  outline: none;
+}
+
+h2 {
+  font-size: var(--font-m);
+  font-weight: bold;
+}
+h3 {
+  font-size: var(--font-s);
+  font-weight: bold;
+}
+
+h1 {
+  font-size: var(--font-l);
+  font-weight: 900;
+  line-height: 130%;
+}
+
+p {
+  line-height: 1.4rem;
+}
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding-left: 0.5rem;
+ 
+}
+
+ul li {
+  list-style-type: disc;
+  line-height: 1.5rem;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--off-white);
+  padding-bottom: 0;
+  height: 100vh;
+  overflow: hidden;
+  padding-top: 5rem;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  z-index: 2;
+  position: relative;
+  padding-top: 4rem;
+}
+
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 2rem;
+  padding-bottom: 0;
+  z-index: 3;
+}
+
+.navbar .logo {
+  display: flex;
+}
+
+.navbar .logo img {
+  height: 2rem;
+  width: auto;
+}
+
+.cta {
+  font-weight: bold;
+  font-family: "Inter", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--padding);
+  padding-left: var(--padding-2);
+  padding-right: var(--padding-2);
+  border-radius: 2rem;
+  background-color: var(--primary);
+  color: var(--off-white);
+  font-weight: bold;
+  width: fit-content;
+  height: fit-content;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.blob {
+  width: 22rem;
+  height: 22rem;
+  position: fixed;
+  z-index: 0;
+  right: -4rem;
+  top: -4rem;
+  background-color: var(--primary);
+  border-radius: 50%;
+  opacity: 0.3;
+  filter: blur(8rem);
+  pointer-events: none;
+}
+
+
+.hide-scrollbar { /* Ensure the content is scrollable */
+  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;  /* Hide scrollbar for Chrome, Safari and Edge */
+}
+
+
+.primary-text{
+  font-weight: bold;
+  color: var(--primary);
+}
+
+
+.footer{
+  background-color: var(--white);
+}
+
+.footer img{
+  height: 3rem;
+  width: auto;
+}
+
+.footer .grid{
+  grid-template-columns: auto auto auto auto;
+}
+
+@media screen and (max-width: 600px) {
+  .footer .grid{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .footer .grid div{
+    width: 9rem;
+  }
+}
