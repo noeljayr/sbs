@@ -1,11 +1,12 @@
 import Image from "next/image";
-import thumbnail from "@/public/videos/adv-thumbnail.png";
-import screenshot from "@/public/images/screenshot.png";
+import thumbnail from "@/public/images/adv-thumbnail.png";
+import screenshot from "@/public/images/mockup.png";
 import "@/css/index.css";
-import { Play } from "iconsax-react";
+
 import CTA from "@/components/CTA";
 import FAQs from "@/components/FAQs";
 import Ad from "@/components/Ad";
+import Pricing from "@/components/Pricing";
 
 export default function Home() {
   return (
@@ -15,20 +16,18 @@ export default function Home() {
           <h1 className="text-center">Enhancing Student Learning</h1>
           <p className="text-center w-full items-center">
             Our <span className="font-semibold">AI</span> powered digital tools
-            make learning enjoyable,
-            <br />
-            while supporting teachers{`'`} instructional efforts.
+            make learning enjoyable, while supporting teachers{`'`}{" "}
+            instructional efforts.
           </p>
         </div>
 
-        <div className="video-cotainer p-2 relative">
-          <div className="w-full video h-full">
-            <Ad />
-          </div>
-        </div>
+        <Ad />
       </div>
 
-      <div className="tools-features flex flex-col px-8 gap-8 items-center mt-16">
+      <div
+        id="features"
+        className="tools-features flex flex-col px-8 gap-8 items-center mt-16"
+      >
         <h1>Tools & Features</h1>
         <div className="tf-container grid">
           <div className="content-card">
@@ -120,11 +119,7 @@ export default function Home() {
       <div className="choose-us grid px-8">
         <div className="header">
           <p className="primary-text">Why choose us?</p>
-          <h1>
-            Revolutionize 
-            Teaching & 
-            Enhancing Learning
-          </h1>
+          <h1>Revolutionize Teaching & Enhancing Learning</h1>
         </div>
 
         <div className="reasons grid">
@@ -170,6 +165,8 @@ export default function Home() {
           <FAQs />
         </div>
       </div>
+
+      <Pricing />
     </main>
   );
 }

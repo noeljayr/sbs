@@ -1,0 +1,78 @@
+.pricing-container {
+  width: 65%;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .pricing-container {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 648px) {
+    .pricing-container {
+      width: calc(100% - 4rem);
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+.pricing-container .plan {
+  background-color: var(--white);
+  padding: 1rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-radius: var(--radius);
+}
+
+.pricing-container .premium {
+  border: 3px solid var(--primary);
+}
+
+.pricing-container .plan h2 {
+  font-weight: 900;
+}
+
+.pricing-container .plan div {
+  display: grid;
+  gap: 0.5rem;
+  align-items: start;
+  width: 100%;
+  padding: 0;
+  justify-content: start;
+  grid-template-columns: 1rem 1fr;
+}
+
+.pricing-container .plan div img {
+  height: 1rem;
+}
+
+.pricing-container .plan div span {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-container .plan div span ul {
+  opacity: 0.8;
+  padding-left: 1.5rem;
+}
+.pricing-container .plan div span h3 {
+  font-weight: 600;
+}
+.pricing-container .plan div span h3 b {
+  font-weight: 600;
+  background: linear-gradient(180deg, #e75d6f 0%, #9368da 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.pricing-container .plan .cta {
+  margin-top: auto;
+  width: 100%;
+}

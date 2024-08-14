@@ -1,0 +1,73 @@
+.rescource-container {
+    width: 70%;
+}
+
+@media screen and (max-width: 720px) {
+    .rescource-container {
+        width: calc(100% - 4rem);
+    }
+}
+
+.search-bar{
+    background-color: var(--white);
+    padding: var(--padding);
+    width: 100%;
+    padding-left: var(--padding-2);
+    padding-right: var(--padding-2);
+    border-radius: 2rem;
+    height: 3rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar span{
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 1rem;
+    align-self: center;
+    background-color: transparent;
+    display: flex;
+    border-radius: 50%;
+}
+
+.search-bar input{
+    width: 100%;
+}
+
+.search-bar span svg{
+    height: 1rem;
+}
+.search-bar span svg path{
+    stroke-width: 3px;
+    stroke: var(--primary);
+    opacity: 0.8;
+}
+
+.files{
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: var(--white);
+}
+
+.files .file{
+    grid-template-columns: 3.25rem 1fr;
+    overflow: hidden;
+}
+
+
+.files .file h3{
+    font-size: var(--font-m);
+}
+
+.files .file  .cover{
+    border-radius: 0.15rem;
+    overflow: hidden;
+}
+
+.files .file .cover img{
+    height: 4rem;
+    width: 3.25rem;
+    border-radius: 0.15rem;
+}

@@ -22,18 +22,18 @@ function MobileMenu() {
         <Link onClick={() => setActive(!active)} className="font-bold" href="/">
           Home
         </Link>
-        <Link onClick={() => setActive(!active)} className="font-bold" href="#">
+        <Link onClick={() => setActive(!active)} className="font-bold" href="/#features">
           Features
         </Link>
-        <Link onClick={() => setActive(!active)} className="font-bold" href="#">
+        <Link onClick={() => setActive(!active)} className="font-bold" href="/#pricing">
           Pricing
         </Link>
 
-        <Link onClick={() => setActive(!active)} className="font-bold" href="#">
+        <Link onClick={() => setActive(!active)} className="font-bold" href="/resources">
           Resources
         </Link>
 
-        <Link onClick={() => setActive(!active)} href="#" className="cta">
+        <Link onClick={() => setActive(!active)} href="/signup" className="cta">
           Get Started
         </Link>
       </div>

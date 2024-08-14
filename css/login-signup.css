@@ -1,0 +1,62 @@
+.login-signup-form {
+    background-color: var(--white);
+    border-radius: 1rem;
+    width: 45ch;
+}
+
+@media screen and (max-width: 480px) {
+    .login-signup-form {
+        width: 100%;
+    }
+}
+
+.login-signup-form form{
+    width: 100%;
+}
+
+
+.input-group{
+    display: flex;
+    position: relative;
+    background-color: var(--off-white);
+    align-items: center;
+    width: 100%;
+    border-radius: 2rem;
+    padding: var(--padding);
+  padding-left: var(--padding-2);
+  padding-right: var(--padding-2);
+}
+
+
+.input-group input{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    width: 100%;
+}
+
+.login-signup-form h2{
+    font-weight: 900;
+}
+
+.login-signup-form .cta,
+.login-signup-form .cta-2{
+    width: 100%;
+}
+
+.login-signup-form .cta-2{
+    color: var(--black);
+    background-color: transparent;
+    border: 1px solid var(--border);
+    opacity: 0.7;
+    font-weight: normal;
+}
+
+.login-signup-form .cta-2 img{
+    height: 0.9rem;
+    width: unset;
+    margin-right: 0.5rem;
+}

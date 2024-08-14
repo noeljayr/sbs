@@ -19,7 +19,7 @@ html {
   --secondary: #f3aeb7;
   --border: #fce8eb;
   --gradinet: linear-gradient(180deg, #e75d6f 0%, #9368da 100%);
-  --font-l: 1.8rem;
+  --font-l: 1.5rem;
   --font-m: 1.05rem;
   --font-s: 0.8rem;
   --font-ss: 0.7rem;
@@ -139,7 +139,7 @@ body {
   width: auto;
 }
 
-.cta {
+.cta, .cta-2 {
   font-weight: bold;
   font-family: "Inter", sans-serif;
   display: flex;
@@ -201,6 +201,9 @@ body {
 
 .footer .grid{
   grid-template-columns: auto auto auto auto;
+}
+.footer ul{
+  padding-left: 1.5rem;
 }
 
 @media screen and (max-width: 600px) {
