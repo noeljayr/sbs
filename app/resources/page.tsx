@@ -1,10 +1,9 @@
-"use client"
+"use client";
 
 import { useState } from "react";
 import { SearchNormal1 } from "iconsax-react";
 import "@/css/resources.css";
 import File from "@/components/File";
-
 
 const files = [
   {
@@ -38,34 +37,40 @@ const files = [
 ];
 
 function Resources() {
-  const  [search, setSearch] = useState('')
+  const [search, setSearch] = useState("");
 
   return (
     <div className="flex flex-col gap-4 rescource-container self-center">
       <div className="search-bar">
         <input
-        onChange={(e) => setSearch(e.target.value)}
-        placeholder="Search For Resources" type="text" />
+          onChange={(e) => setSearch(e.target.value)}
+          placeholder="Search For Resources"
+          type="text"
+        />
         <span className="">
           <SearchNormal1 color="#fef6f7" />
         </span>
       </div>
 
       <div className="files flex flex-col gap-8">
-        {files.filter((file, index)=>{
-          return search.toLocaleLowerCase() === ''? file : file.title.toLocaleLowerCase().includes(search)
-        }).map((file, index) => {
-          return (
-            <File
-              key={index}
-              title={file.title}
-              author={file.author}
-              cover={file.cover}
-              size={file.size}
-              format={file.format}
-            />
-          );
-        })}
+        {files
+          .filter((file, index) => {
+            return search.toLocaleLowerCase() === ""
+              ? file
+              : file.title.toLocaleLowerCase().includes(search);
+          })
+          .map((file, index) => {
+            return (
+              <File
+                key={index}
+                title={file.title}
+                author={file.author}
+                cover={file.cover}
+                size={file.size}
+                format={file.format}
+              />
+            );
+          })}
       </div>
     </div>
   );

@@ -218,3 +218,40 @@ body {
     width: 9rem;
   }
 }
+
+.search-bar{
+  background-color: var(--white);
+  padding: var(--padding);
+  width: 100%;
+  padding-left: var(--padding-2);
+  padding-right: var(--padding-2);
+  border-radius: 2rem;
+  height: 3rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-bar span{
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 1rem;
+  align-self: center;
+  background-color: transparent;
+  display: flex;
+  border-radius: 50%;
+}
+
+.search-bar input{
+  width: 100%;
+}
+
+.search-bar span svg{
+  height: 1rem;
+}
+.search-bar span svg path{
+  stroke-width: 3px;
+  stroke: var(--primary);
+  opacity: 0.8;
+}
